@@ -101,6 +101,9 @@ const config = {
     return [
       require('postcss-import')({ addDependencyTo: bundler }),
       require('precss')(),
+      require('postcss-url')({
+       copy: 'rebase',
+      }),
       require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
     ];
   },
